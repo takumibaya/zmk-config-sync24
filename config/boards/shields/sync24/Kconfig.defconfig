@@ -1,0 +1,22 @@
+# Copyright (c) 2025 The ZMK Contributors
+# SPDX-License-Identifier: MIT
+
+if SHIELD_SYNC24_LEFT
+
+config ZMK_KEYBOARD_NAME
+    default "SYNC24"
+    
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
+
+endif
+
+if SHIELD_SYNC24_LEFT || SHIELD_SYNC24_RIGHT
+
+config ZMK_SPLIT
+    default y
+
+config ZMK_STUDIO
+    default y
+
+endif

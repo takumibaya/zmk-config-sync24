@@ -11,6 +11,31 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
 
+&mt {
+    flavor = "tap-preferred";
+    tapping-term-ms = <225>;
+    quick-tap-ms = <200>;
+    require-prior-idle-ms = <150>;
+};
+
+&lt {
+    flavor = "balanced";
+    tapping-term-ms = <175>;
+    quick-tap-ms = <200>;
+};
+
+&sk {
+};
+
+&sl {
+};
+
+&caps_word {
+};
+
+&key_repeat {
+};
+
 / {
 
     combos {
@@ -18,13 +43,13 @@
 
         combo_us {
             timeout-ms = <50>;
-            key-positions = <14 15>;
+            key-positions = <15 16>;
             bindings = <&kp LANG2>;
         };
 
         combo_kana {
             timeout-ms = <50>;
-            key-positions = <20 21>;
+            key-positions = <19 20>;
             bindings = <&kp LANG1>;
         };
 
@@ -33,6 +58,8 @@
             key-positions = <36 37>;
             bindings = <&mo 3>;
         };
+
+        
     };
 
     keymap {
@@ -101,9 +128,9 @@
             bindings = <
 
 // ╷           ╷           ╷           ╷           ╷           ╷                         ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
-    &none       &kp Q LALT LCTRL &kp W LALT LCTRL &kp E LALT LCTRL &kp T LALT LCTRL &none     &none       &kp F1      &kp F2      &kp F3      &kp F4      &none
-    &none       &kp A LALT LCTRL &kp S LALT LCTRL &kp D LALT LCTRL &kp F LALT LCTRL &none     &none       &kp F5      &kp F6      &kp F7      &kp F8       &none
-    &none       &kp Z LALT LCTRL &kp X LALT LCTRL &kp C LALT LCTRL &kp V LALT LCTRL &none     &none       &kp F9      &kp F10     &kp F11     &kp F12       &none
+    &none       &none        &none       &none      &none       &none                         &none       &kp F1      &kp F2      &kp F3      &kp F4      &none
+    &none       &none        &none       &none      &none       &none                         &none       &kp F5      &kp F6      &kp F7      &kp F8       &none
+    &none       &none        &none       &none      &none       &none                         &none       &kp F9      &kp F10     &kp F11     &kp F12       &none
     &none       &none       &none       &none       &none       &none                         &none       &none       &none       &none       &none       &none
             
             >;

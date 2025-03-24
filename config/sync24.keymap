@@ -73,7 +73,7 @@
 
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
     &none       &kp AT      &kp LBKT      &kp DOT   &kp RBKT       &none           &none       &kp ESC     &kp UP      &kp CAPS  &kp PG_UP   &kp HOME
-    &none       &kp HASH  &mt LCMD LPAR   &mt LALT SQT   &mt LSHFT RPAR   &kp AMPS     &none       &kp LEFT    &kp DOWN    &kp RIGHT  &kp PG_DOWN  &kp END
+    &none       &kp HASH  &mt LGUI LPAR &mt LALT SQT &mt LSHFT RPAR   &kp AMPS     &none       &kp LEFT    &kp DOWN    &kp RIGHT  &kp PG_DN  &kp END
     &none       &kp BLSH    &kp LBRC      &kp GRAVE &kp RBRC      &kp PIPE         &none       &none       &none       &none     &none       &none
     &none       &none       &none       &none       &kp DEL       &trans             &trans    &none       &none       &none     &none       &none
             

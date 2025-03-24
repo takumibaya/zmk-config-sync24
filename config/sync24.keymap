@@ -73,7 +73,7 @@
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
     &kp TAB    &kp Q       &kp L       &kp U       &kp COMMA       &kp DOT         &kp F      &kp W       &kp R       &kp Y       &kp P         &kp BACKSPACE 
     &kp LCMD   &kp E       &mt LCTRL I  &mt LALT A  &mt LSHIFT O  &kp MINUS         &kp K    &mt RSHIFT T    &mt RALT N  &mt RCTRL S  &kp H  &kp RET
-    &kp LSHFT  &kp Z       &kp X       &kp C       &kp V       &kp B           &kp D      &kp M       &kp J   &kp B     &kp FSLH      &kp RSHIFT
+    &kp LSHFT  &kp Z       &kp X       &kp C       &kp V       &kp SEMI        &kp G   &kp D      &kp M       &kp J   &kp B         &kp RSHIFT
     &kp LSHFT  &kp LCTRL   &kp LALT    &kp LCMD    &lt 1 BSPC    &mt LCMD RET     &mt RCMD TAB   &lt 2 SPACE   &kp RCMD    &kp RALT    &kp BSLH      &none
 
             >;

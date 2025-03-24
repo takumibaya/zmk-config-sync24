@@ -58,9 +58,9 @@
             bindings = <
 
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
-    &kp ESC     &none       &kp N1      &kp N2  　  &kp N3       &none          &kp CARET   &kp LT     &kp EQUAL    &kp GT       &kp PRCNT     &none
+    &kp ESC     &none       &kp N1      &kp N2      &kp N3       &trans          &kp CARET   &kp LT     &kp EQUAL     &kp GT       &kp PRCNT     &none
     &kp LCMD    &kp N0      &kp N4      &kp N5      &kp N6       &kp LPAR        &kp RPAR    &mt RSHIFT PLUS  &mt RALT MINUS  &mt RCTRL STAR   &none       &none
-    &kp LSHFT   &kp DLLR    &kp N7   &kp N8      &kp N9       &kp DOT        &kp UNDER    &kp EXCL    &kp QMARK    &kp COLON  &kp SEMI          &none
+    &kp LSHFT   &kp DLLR    &kp N7   &kp N8         &kp N9       &kp DOT        &kp UNDER    &kp EXCL    &kp QMARK    &kp COLON  &kp SEMI          &none
     &kp LSHFT   &none       &none       &none       &none       &trans          &none       &lt 4 SPACE       &none     &none  &none  &none
 
             >;

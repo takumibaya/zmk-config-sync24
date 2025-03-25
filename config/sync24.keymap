@@ -64,12 +64,6 @@
             bindings = <&mo 5>;
         };
 
-        combo_keypad {
-            timeout-ms = <50>;
-            key-positions = <5 17>;
-            bindings = <&tog 4>;
-        };
-
         combo_raycast {
             timeout-ms = <50>;
             key-positions = <16 40>;
@@ -80,6 +74,11 @@
             timeout-ms = <50>;
             key-positions = <19 43>;
             bindings = <&kp LA(SPACE)>;
+        };
+
+        keypad {
+            bindings = <&tog 4>;
+            key-positions = <4 5 17 16>;
         };
     };
 

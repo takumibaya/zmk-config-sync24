@@ -63,6 +63,11 @@
             timeout-ms = <50>;
             key-positions = <36 37>;
             bindings = <&mo 3>;
+        };     
+        combo_function {
+            timeout-ms = <50>;
+            key-positions = <40 43>;
+            bindings = <&mo 3>;
         };
         combo_keypad {
             timeout-ms = <50>;
@@ -108,7 +113,7 @@
     &kp ESC     &kp TILDE       &kp N1      &kp N2      &kp N3       &none          &kp CARET   &kp LT     &kp EQUAL     &kp GT       &kp PRCNT     &none
     &trans    &kp N0      &kp N4      &kp N5      &kp N6       &none        &none    &mt RSHIFT PLUS  &mt RALT MINUS  &mt RCTRL STAR   &kp FSLH       &none
     &trans   &kp DLLR    &kp N7   &kp N8         &kp N9       &kp DOT        &kp UNDER    &kp EXCL    &kp QMARK    &kp COLON  &kp SEMI          &none
-    &trans   &trans      &trans       &trans      &trans      &trans          &none       &lt 4 SPACE       &trans     &trans    &trans    &trans
+    &trans   &trans      &trans       &trans      &trans      &trans          &trans       &lt 4 SPACE       &trans     &trans    &trans    &trans
 
             >;
         };

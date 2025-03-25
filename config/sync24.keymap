@@ -72,12 +72,12 @@
     combo_raycast {
             timeout-ms = <50>;
             key-positions = <16 40>;
-            bindings = <&kp LCMD SPACE>;
+            bindings = <&kp LG(SPACE)>;
         };
      combo_optspace {
             timeout-ms = <50>;
             key-positions = <19 43>;
-            bindings = <&kp LALT SPACE>;
+            bindings = <&kp LA(SPACE)>;
         };
         
     };
@@ -148,10 +148,10 @@
             bindings = <
 
 // ╷           ╷           ╷           ╷           ╷           ╷                         ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
-    &none       &none        &none       &none      &none       &none                         &none       &kp F1      &kp F2      &kp F3      &kp F4      &none
-    &none       &none        &none       &none      &none       &none                         &none       &kp F5      &kp F6      &kp F7      &kp F8       &none
-    &none       &none        &none       &none      &none       &none                         &none       &kp F9      &kp F10     &kp F11     &kp F12       &none
-    &none       &none       &none       &none       &none       &none                         &none       &none       &none       &none       &none       &none
+    &none       &kp LC(RA(Q)) &kp LC(RA(W)) &kp LC(RA(E))  &kp LC(RA(R)) &none                         &none       &kp F1      &kp F2      &kp F3      &kp F4      &none
+    &none       &kp LC(RA(A)) &kp LC(RA(S)) &kp LC(RA(D))  &kp LC(RA(F)) &none                         &none       &kp F5      &kp F6      &kp F7      &kp F8       &none
+    &none       &kp LC(RA(Z)) &kp LC(RA(X)) &kp LC(RA(C))  &kp LC(RA(V)) &none                         &none       &kp F9      &kp F10     &kp F11     &kp F12       &none
+    &none       &none &none &none &none &none                         &none       &none       &none       &none       &none       &none
             
             >;
         };

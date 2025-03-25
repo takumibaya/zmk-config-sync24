@@ -100,7 +100,7 @@
 &kp TAB    &kp Q      &kp W        &kp E       &kp R         &kp T             &kp Y         &kp U         &kp I       &kp O        &kp P      &kp BACKSPACE
 &kp LCTRL  &kp A      &mt LCTRL S  &mt LALT D  &mt LSHIFT F  &kp G             &kp H         &mt RSHIFT J  &mt RALT K  &mt RCTRL L  &kp MINUS  &kp RET
 &kp LSHFT  &kp Z      &kp X        &kp C       &kp V         &kp B             &kp N         &kp M         &kp COMMA   &kp DOT      &kp FSLH   &kp RSHIFT
-&kp LCTRL  &kp LCTRL  &kp LALT     &kp LCMD    &lt 1 BSPC    &mt LCMD RET      &mt RCMD TAB  &lt 2 SPACE   &kp RCMD    &kp RALT     &kp BSLH   &none
+&to 4      &kp LCTRL  &kp LALT     &kp LCMD    &lt 1 BSPC    &mt LCMD RET      &mt RCMD TAB  &lt 2 SPACE   &kp RCMD    &kp RALT     &kp BSLH   &to 4
             >;
         };
 
@@ -148,7 +148,7 @@
 &none  &kp LC(RA(Q))  &kp LC(RA(W))  &kp LC(RA(E))  &kp LC(RA(R))  &none      &none  &kp F1  &kp F2   &kp F3   &kp F4   &none
 &none  &kp LC(RA(A))  &kp LC(RA(S))  &kp LC(RA(D))  &kp LC(RA(F))  &none      &none  &kp F5  &kp F6   &kp F7   &kp F8   &none
 &none  &kp LC(RA(Z))  &kp LC(RA(X))  &kp LC(RA(C))  &kp LC(RA(V))  &none      &none  &kp F9  &kp F10  &kp F11  &kp F12  &none
-&none  &none          &none          &none          &mo 4          &none      &none  &mo 4   &none    &none    &none    &none
+&to 0  &none          &none          &none          &mo 4          &none      &none  &mo 4   &none    &none    &none    &to 0
             >;
         };
 

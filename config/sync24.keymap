@@ -112,7 +112,7 @@
 &kp ESC  &kp TILDE  &kp N1  &kp N2  &kp N3  &none        &kp CARET  &kp LT           &kp EQUAL       &kp GT          &kp PRCNT  &none
 &trans   &kp N0     &kp N4  &kp N5  &kp N6  &none        &none      &mt RSHIFT PLUS  &mt RALT MINUS  &mt RCTRL STAR  &kp FSLH   &none
 &trans   &kp DLLR   &kp N7  &kp N8  &kp N9  &kp DOT      &kp UNDER  &kp EXCL         &kp QMARK       &kp COLON       &kp SEMI   &none
-&trans   &trans     &trans  &trans  &trans  &trans       &trans     &lt 4 SPACE      &trans          &trans          &trans     &trans
+&trans   &trans     &trans  &trans  &none   &trans       &trans     &lt 4 SPACE      &trans          &trans          &trans     &trans
             >;
         };
 
@@ -124,7 +124,7 @@
 &trans  &kp AT    &kp LBKT       &kp DOT       &kp RBKT        &none         &none   &kp ESC   &kp UP    &kp CAPS   &kp PG_UP  &kp HOME
 &trans  &kp HASH  &mt LGUI LPAR  &mt LALT SQT  &mt LSHFT RPAR  &kp AMPS      &none   &kp LEFT  &kp DOWN  &kp RIGHT  &kp PG_DN  &kp END
 &trans  &kp BSLH  &kp LBRC       &kp GRAVE     &kp RBRC        &kp PIPE      &none   &none     &none     &none      &none      &none
-&trans  &trans    &trans         &trans        &lt 4 DEL       &trans        &trans  &trans    &trans    &trans     &trans     &trans
+&trans  &trans    &trans         &trans        &lt 4 DEL       &trans        &trans  &none     &trans    &trans     &trans     &trans
             >;
         };
 
@@ -148,7 +148,7 @@
 &none  &kp LC(RA(Q))  &kp LC(RA(W))  &kp LC(RA(E))  &kp LC(RA(R))  &none      &none  &kp F1  &kp F2   &kp F3   &kp F4   &none
 &none  &kp LC(RA(A))  &kp LC(RA(S))  &kp LC(RA(D))  &kp LC(RA(F))  &none      &none  &kp F5  &kp F6   &kp F7   &kp F8   &none
 &none  &kp LC(RA(Z))  &kp LC(RA(X))  &kp LC(RA(C))  &kp LC(RA(V))  &none      &none  &kp F9  &kp F10  &kp F11  &kp F12  &none
-&none  &none          &none          &none          &none          &none      &none  &none   &none    &none    &none    &none
+&none  &none          &none          &none          &mo 4          &none      &none  &mo 4   &none    &none    &none    &none
             >;
         };
 

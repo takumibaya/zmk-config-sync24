@@ -74,13 +74,18 @@
         };
 
         Utill {
-            bindings = <&mo 3>;
+            bindings = <&mo 4>;
             key-positions = <36 37>;
         };
 
         keypad {
-            bindings = <&tog 5>;
+            bindings = <&tog 6>;
             key-positions = <0 12 24 36>;
+        };
+
+        QWERTY {
+            bindings = <&QWERTY>;
+            key-positions = <36 37 46 47>;
         };
     };
 
@@ -88,8 +93,15 @@
         mouse: new_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&tog 0 &tog 3>;
+            bindings = <&tog 0 &tog 4>;
             label = "NEW_MACRO";
+        };
+
+        QWERTY: QWERTY {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&tog 1 &tog 0>;
+            label = "QWERTY";
         };
     };
 
@@ -119,7 +131,16 @@
 &kp TAB    &none      &kp L        &kp U       &kp COMMA     &kp DOT           &kp F         &kp W         &kp R       &kp Y        &none  &kp BACKSPACE
 &kp Q      &kp E      &mt LCTRL I  &mt LALT A  &mt LSHIFT O  &kp MINUS         &kp K         &mt RSHIFT T  &mt RALT N  &mt RCTRL S  &kp H  &kp P
 &kp LSHFT  &kp Z      &kp X        &kp C       &kp V         &kp SEMI          &kp G         &kp D         &kp M       &kp J        &kp B  &kp RSHIFT
-&tog 6     &kp LCTRL  &kp LALT     &kp LCMD    &lt 1 BSPC    &mt LCMD RET      &mt RCMD TAB  &lt 2 SPACE   &kp RCMD    &kp RALT     &none  &tog 6
+&tog 7     &kp LCTRL  &kp LALT     &kp LCMD    &lt 2 BSPC    &mt LCMD RET      &mt RCMD TAB  &lt 3 SPACE   &kp RCMD    &kp RALT     &none  &tog 7
+            >;
+        };
+
+        QWERTY {
+            bindings = <
+&kp TAB    &kp Q      &kp W     &kp E     &kp R            &kp T                   &kp Y              &kp U        &kp I      &kp O     &kp P      &kp BSPC
+&kp LCTRL  &kp A      &kp S     &kp D     &kp F            &kp G                   &kp H              &kp J        &kp K      &kp L     &kp MINUS  &kp RET
+&kp LSHFT  &kp Z      &kp X     &kp C     &kp V            &kp B                   &kp N              &kp M        &kp COMMA  &kp DOT   &kp FSLH   &kp RSHFT
+&trans     &kp LCTRL  &kp LALT  &kp LGUI  &lt 2 BACKSPACE  &mt LEFT_GUI ENTER      &mt RIGHT_GUI TAB  &lt 3 SPACE  &kp RGUI   &kp RALT  &kp RCTRL  &trans
             >;
         };
 
@@ -129,7 +150,7 @@
 &kp ESC    &kp TILDE  &kp N1  &kp N2  &kp N3  &none          &kp CARET  &kp LT           &kp EQUAL       &kp GT          &kp PRCNT  &none
 &kp LCTRL  &kp N0     &kp N4  &kp N5  &kp N6  &kp DOT        &kp TILDE  &mt RSHIFT PLUS  &mt RALT MINUS  &mt RCTRL STAR  &kp FSLH   &none
 &trans     &kp DLLR   &kp N7  &kp N8  &kp N9  &kp COMMA      &kp UNDER  &kp EXCL         &kp QMARK       &kp COLON       &kp SEMI   &none
-&trans     &trans     &trans  &trans  &none   &trans         &trans     &lt 4 SPACE      &trans          &trans          &trans     &trans
+&trans     &trans     &trans  &trans  &none   &trans         &trans     &lt 5 SPACE      &trans          &trans          &trans     &trans
             >;
         };
 
@@ -139,7 +160,7 @@
 &trans     &kp AT    &kp LBKT       &kp DOT       &kp RBKT        &none         &none   &kp ESC   &kp UP    &kp CAPS   &kp PG_UP  &kp HOME
 &kp LCTRL  &kp HASH  &mt LGUI LPAR  &mt LALT SQT  &mt LSHFT RPAR  &kp AMPS      &none   &kp LEFT  &kp DOWN  &kp RIGHT  &kp PG_DN  &kp END
 &trans     &kp BSLH  &kp LBRC       &kp GRAVE     &kp RBRC        &kp PIPE      &none   &none     &none     &none      &none      &none
-&trans     &trans    &trans         &trans        &lt 4 DEL       &trans        &trans  &none     &trans    &trans     &trans     &trans
+&trans     &trans    &trans         &trans        &lt 5 DEL       &trans        &trans  &none     &trans    &trans     &trans     &trans
             >;
         };
 
@@ -149,7 +170,7 @@
 &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR          &msc MOVE_Y(-15)  &none              &mmv MOVE_Y(-600)     &none             &kp LS(SPACE)  &kp HOME
 &studio_unlock  &none         &none         &none         &none         &bt BT_CLR_ALL      &msc MOVE_Y(15)   &mmv MOVE_X(-600)  &mmv MOVE_Y(600)      &mmv MOVE_X(600)  &kp SPACE      &kp END
 &out OUT_TOG    &none         &none         &none         &none         &none               &mkp MCLK         &none              &none                 &none             &none          &none
-&none           &none         &none         &none         &none         &none               &mkp LCLK         &mkp RCLK          &kp LG(LEFT_BRACKET)  &kp LG(RBKT)      &none          &tog 3
+&none           &none         &none         &none         &none         &none               &mkp LCLK         &mkp RCLK          &kp LG(LEFT_BRACKET)  &kp LG(RBKT)      &none          &tog 4
             >;
         };
 
@@ -169,7 +190,7 @@
 &kp BACKSPACE   &kp KP_SLASH              &kp STAR         &kp KP_MINUS     &kp KP_PLUS      &kp KP_ENTER         &msc SCRL_DOWN   &kp LG(LEFT_BRACKET)  &mmv MOVE_Y(-1600)  &kp LG(RIGHT_BRACKET)  &kp LS(SPACE)  &kp HOME
 &kp KP_NUMLOCK  &kp KP_RIGHT_PARENTHESIS  &kp KP_NUMBER_9  &kp KP_NUMBER_6  &kp KP_NUMBER_3  &kp KP_DOT           &msc SCRL_UP     &mmv MOVE_X(-1600)    &mmv MOVE_Y(1600)   &mmv MOVE_X(1600)      &kp SPACE      &kp END
 &kp ESC         &kp KP_LPAR               &kp KP_NUMBER_8  &kp KP_NUMBER_5  &kp KP_NUMBER_2  &kp KP_COMMA         &msc SCRL_RIGHT  &msc SCRL_LEFT        &kp LEFT_GUI        &kp LEFT_SHIFT         &kp LEFT_ALT   &kp LCTRL
-&tog 5          &kp KP_NUM                &kp KP_NUMBER_7  &kp KP_NUMBER_4  &kp KP_NUMBER_1  &kp KP_NUMBER_0      &mkp LCLK        &mkp RCLK             &none               &none                  &none          &tog 5
+&tog 6          &kp KP_NUM                &kp KP_NUMBER_7  &kp KP_NUMBER_4  &kp KP_NUMBER_1  &kp KP_NUMBER_0      &mkp LCLK        &mkp RCLK             &none               &none                  &none          &tog 6
             >;
         };
 
@@ -179,7 +200,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans      &msc SCRL_DOWN   &kp LG(LEFT_BRACKET)  &mmv MOVE_Y(-1600)  &kp LG(RIGHT_BRACKET)  &kp LS(SPACE)  &kp HOME
 &trans  &trans  &trans  &trans  &trans  &trans      &msc SCRL_UP     &mmv MOVE_X(-1600)    &mmv MOVE_Y(1600)   &mmv MOVE_X(1600)      &kp SPACE      &kp END
 &trans  &trans  &trans  &trans  &trans  &trans      &msc SCRL_RIGHT  &msc SCRL_LEFT        &kp LEFT_GUI        &kp LEFT_SHIFT         &kp LEFT_ALT   &kp LCTRL
-&trans  &trans  &trans  &trans  &trans  &trans      &mkp LCLK        &mkp RCLK             &none               &none                  &none          &tog 6
+&trans  &trans  &trans  &trans  &trans  &trans      &mkp LCLK        &mkp RCLK             &none               &none                  &none          &tog 7
             >;
         };
     };

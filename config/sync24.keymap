@@ -62,7 +62,7 @@
         combo_util {
             timeout-ms = <50>;
             key-positions = <36 37>;
-            bindings = <&mo 5>;
+            bindings = <&mo 3>;
         };
 
         combo_raycast {
@@ -93,7 +93,7 @@
                 <&macro_wait_time 100>,
                 <&kp LEFT_ALT>,
                 <&macro_wait_time 200>,
-                <&tog 0 &tog 5>;
+                <&tog 0 &tog 3>;
 
             label = "NEW_MACRO";
         };

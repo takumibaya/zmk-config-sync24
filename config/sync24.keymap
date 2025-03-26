@@ -149,16 +149,6 @@
             >;
         };
 
-        function {
-            display-name = "function";
-            bindings = <
-&none  &none          &kp RA(LC(Q))  &kp LC(RA(W))  &kp LC(RA(E))  &none      &none  &kp F1  &kp F2   &kp F3   &kp F4   &none
-&none  &kp LC(RA(F))  &kp LC(RA(A))  &kp LC(RA(S))  &kp LC(RA(D))  &none      &none  &kp F5  &kp F6   &kp F7   &kp F8   &none
-&none  &kp LC(RA(Z))  &kp LC(RA(Z))  &kp LC(RA(X))  &kp LC(RA(C))  &none      &none  &kp F9  &kp F10  &kp F11  &kp F12  &none
-&none  &none          &none          &none          &none          &none      &none  &none   &none    &none    &none    &none
-            >;
-        };
-
         Utility {
             display-name = "Util";
             bindings = <
@@ -166,6 +156,16 @@
 &studio_unlock  &none         &none         &none         &none         &bt BT_CLR_ALL      &kp UP_ARROW     &kp KP_NUMBER_4  &kp KP_NUMBER_2  &kp KP_NUMBER_6  &kp SPACE      &kp END
 &out OUT_TOG    &none         &none         &none         &none         &none               &kp DOWN         &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &none          &none
 &none           &none         &none         &none         &none         &none               &kp KP_NUMBER_5  &mkp RCLK        &kp KP_NUMBER_0  &none            &none          &mouse
+            >;
+        };
+
+        function {
+            display-name = "function";
+            bindings = <
+&none  &none          &kp RA(LC(Q))  &kp LC(RA(W))  &kp LC(RA(E))  &none      &none  &kp F1  &kp F2   &kp F3   &kp F4   &none
+&none  &kp LC(RA(F))  &kp LC(RA(A))  &kp LC(RA(S))  &kp LC(RA(D))  &none      &none  &kp F5  &kp F6   &kp F7   &kp F8   &none
+&none  &kp LC(RA(Z))  &kp LC(RA(Z))  &kp LC(RA(X))  &kp LC(RA(C))  &none      &none  &kp F9  &kp F10  &kp F11  &kp F12  &none
+&none  &none          &none          &none          &none          &none      &none  &none   &none    &none    &none    &none
             >;
         };
 
@@ -177,6 +177,20 @@
 &kp KP_DOT    &kp KP_N3     &kp KP_N6    &kp KP_N9     &kp KP_N6      &none      &none  &none  &none  &none  &none  &none
 &kp KP_ENTER  &kp KP_CLEAR  &kp KP_PLUS  &kp KP_MINUS  &kp KP_DIVIDE  &none      &none  &none  &none  &none  &none  &none
             >;
+        };
+    };
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        function-num {
+            if-layers = <1>;
+            then-layer = <3>;
+        };
+
+        function-navi {
+            if-layers = <2>;
+            then-layer = <3>;
         };
     };
 };

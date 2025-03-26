@@ -87,20 +87,36 @@
         mouse: new_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&kp LEFT_ALT>,
-                <&macro_wait_time 100>,
-                <&kp LEFT_ALT>,
-                <&macro_wait_time 100>,
-                <&kp LEFT_ALT>,
-                <&macro_wait_time 100>,
-                <&kp LEFT_ALT>,
-                <&macro_wait_time 100>,
-                <&kp LEFT_ALT>,
-                <&macro_wait_time 200>,
-                <&tog 0 &tog 3>;
-
+            bindings = <&tog 0 &tog 3>;
             label = "NEW_MACRO";
+        };
+
+        mouse_upleft: upleft {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&mmv MOVE_X(-500) &mmv MOVE_Y(-500)>;
+            label = "UPLEFT";
+        };
+
+        mouse_UpRight: mouse_UpRight {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&mmv MOVE_X(500) &mmv MOVE_Y(-500)>;
+            label = "MOUSE_UPRIGHT";
+        };
+
+        mouse_downright: mouse_downright {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&mmv MOVE_X(500) &mmv MOVE_Y(500)>;
+            label = "MOUSE_DOWNRIGHT";
+        };
+
+        mouse_downleft: mouse_downleft {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&mmv MOVE_X(-500) &mmv MOVE_Y(500)>;
+            label = "MOUSE_DOWNLEFT";
         };
     };
 
@@ -157,10 +173,10 @@
         Utility {
             display-name = "Util";
             bindings = <
-&bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR          &msc MOVE_Y(-10)  &kp KP_NUMBER_7    &mmv MOVE_Y(100)   &kp KP_NUMBER_9   &kp LS(SPACE)  &kp HOME
-&studio_unlock  &none         &none         &none         &none         &bt BT_CLR_ALL      &msc MOVE_Y(10)   &mmv MOVE_X(-100)  &mmv MOVE_Y(-100)  &mmv MOVE_X(100)  &kp SPACE      &kp END
-&out OUT_TOG    &none         &none         &none         &none         &none               &kp F22           &kp KP_NUMBER_1    &kp KP_NUMBER_2    &kp KP_NUMBER_3   &none          &none
-&none           &none         &none         &none         &none         &none               &kp KP_NUMBER_5   &kp F21            &kp KP_NUMBER_0    &none             &none          &mouse
+&bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR          &msc MOVE_Y(-15)  &mouse_upleft      &mmv MOVE_Y(-600)     &mouse_UpRight    &kp LS(SPACE)  &kp HOME
+&studio_unlock  &none         &none         &none         &none         &bt BT_CLR_ALL      &msc MOVE_Y(15)   &mmv MOVE_X(-600)  &mmv MOVE_Y(600)      &mmv MOVE_X(600)  &kp SPACE      &kp END
+&out OUT_TOG    &none         &none         &none         &none         &none               &mkp MCLK         &mouse_downleft    &none                 &mouse_downright  &none          &none
+&none           &none         &none         &none         &none         &none               &mkp LCLK         &mkp RCLK          &kp LG(LEFT_BRACKET)  &kp LG(RBKT)      &none          &mouse
             >;
         };
 

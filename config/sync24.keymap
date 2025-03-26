@@ -62,7 +62,7 @@
         combo_util {
             timeout-ms = <50>;
             key-positions = <36 37>;
-            bindings = <&mo 1>;
+            bindings = <&mo 5>;
         };
 
         combo_raycast {
@@ -93,9 +93,24 @@
                 <&macro_wait_time 100>,
                 <&kp LEFT_ALT>,
                 <&macro_wait_time 200>,
-                <&tog 0 &tog 1>;
+                <&tog 0 &tog 5>;
 
             label = "NEW_MACRO";
+        };
+    };
+
+    behaviors {
+        toggle_on: toggle_on {
+            compatible = "zmk,behavior-toggle-layer";
+            label = "TOGGLE_ON";
+            #binding-cells = <1>;
+        };
+
+        toggle_off: toggle_off {
+            compatible = "zmk,behavior-toggle-layer";
+            label = "TOGGLE_OFF";
+            #binding-cells = <1>;
+            toggle-mode = "off";
         };
     };
 
@@ -110,17 +125,7 @@
 &kp TAB    &none      &kp L        &kp U       &kp COMMA     &kp DOT           &kp F         &kp W         &kp R       &kp Y        &none  &kp BACKSPACE
 &kp Q      &kp E      &mt LCTRL I  &mt LALT A  &mt LSHIFT O  &kp MINUS         &kp K         &mt RSHIFT T  &mt RALT N  &mt RCTRL S  &kp H  &kp P
 &kp LSHFT  &kp Z      &kp X        &kp C       &kp V         &kp SEMI          &kp G         &kp D         &kp M       &kp J        &kp B  &kp RSHIFT
-&kp LCTRL  &kp LCTRL  &kp LALT     &kp LCMD    &lt 2 BSPC    &mt LCMD RET      &mt RCMD TAB  &lt 3 SPACE   &kp RCMD    &kp RALT     &none  &mouse
-            >;
-        };
-
-        Utility {
-            display-name = "Util";
-            bindings = <
-&bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR          &none            &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp LS(SPACE)  &kp HOME
-&studio_unlock  &none         &none         &none         &none         &bt BT_CLR_ALL      &kp UP_ARROW     &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp SPACE      &kp END
-&out OUT_TOG    &none         &none         &none         &none         &none               &kp DOWN         &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &none          &none
-&none           &none         &none         &none         &none         &none               &kp KP_NUMBER_5  &mkp RCLK        &kp KP_NUMBER_0  &none            &none          &mouse
+&kp LCTRL  &kp LCTRL  &kp LALT     &kp LCMD    &lt 1 BSPC    &mt LCMD RET      &mt RCMD TAB  &lt 2 SPACE   &kp RCMD    &kp RALT     &none  &mouse
             >;
         };
 
@@ -130,7 +135,7 @@
 &kp ESC    &kp TILDE  &kp N1  &kp N2  &kp N3  &none          &kp CARET  &kp LT           &kp EQUAL       &kp GT          &kp PRCNT  &none
 &kp LCTRL  &kp N0     &kp N4  &kp N5  &kp N6  &kp DOT        &kp TILDE  &mt RSHIFT PLUS  &mt RALT MINUS  &mt RCTRL STAR  &kp FSLH   &none
 &trans     &kp DLLR   &kp N7  &kp N8  &kp N9  &kp COMMA      &kp UNDER  &kp EXCL         &kp QMARK       &kp COLON       &kp SEMI   &none
-&trans     &trans     &trans  &trans  &none   &trans         &trans     &lt 4 SPACE      &trans          &trans          &trans     &trans
+&trans     &trans     &trans  &trans  &none   &trans         &trans     &lt 3 SPACE      &trans          &trans          &trans     &trans
             >;
         };
 
@@ -140,7 +145,7 @@
 &trans     &kp AT    &kp LBKT       &kp DOT       &kp RBKT        &none         &none   &kp ESC   &kp UP    &kp CAPS   &kp PG_UP  &kp HOME
 &kp LCTRL  &kp HASH  &mt LGUI LPAR  &mt LALT SQT  &mt LSHFT RPAR  &kp AMPS      &none   &kp LEFT  &kp DOWN  &kp RIGHT  &kp PG_DN  &kp END
 &trans     &kp BSLH  &kp LBRC       &kp GRAVE     &kp RBRC        &kp PIPE      &none   &none     &none     &none      &none      &none
-&trans     &trans    &trans         &trans        &lt 4 DEL       &trans        &trans  &none     &trans    &trans     &trans     &trans
+&trans     &trans    &trans         &trans        &lt 3 DEL       &trans        &trans  &none     &trans    &trans     &trans     &trans
             >;
         };
 
@@ -151,6 +156,16 @@
 &none  &kp LC(RA(F))  &kp LC(RA(A))  &kp LC(RA(S))  &kp LC(RA(D))  &none      &none  &kp F5  &kp F6   &kp F7   &kp F8   &none
 &none  &kp LC(RA(Z))  &kp LC(RA(Z))  &kp LC(RA(X))  &kp LC(RA(C))  &none      &none  &kp F9  &kp F10  &kp F11  &kp F12  &none
 &none  &none          &none          &none          &none          &none      &none  &none   &none    &none    &none    &none
+            >;
+        };
+
+        Utility {
+            display-name = "Util";
+            bindings = <
+&bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR          &none            &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp LS(SPACE)  &kp HOME
+&studio_unlock  &none         &none         &none         &none         &bt BT_CLR_ALL      &kp UP_ARROW     &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp SPACE      &kp END
+&out OUT_TOG    &none         &none         &none         &none         &none               &kp DOWN         &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &none          &none
+&none           &none         &none         &none         &none         &none               &kp KP_NUMBER_5  &mkp RCLK        &kp KP_NUMBER_0  &none            &none          &mouse
             >;
         };
 

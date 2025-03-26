@@ -169,10 +169,10 @@
         Utility {
             display-name = "Util";
             bindings = <
-&bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR          &none  &none  &none  &none  &none  &none
-&studio_unlock  &none         &none         &none         &none         &bt BT_CLR_ALL      &none  &none  &none  &none  &none  &none
-&out OUT_TOG    &none         &none         &none         &none         &none               &none  &none  &none  &none  &none  &none
-&none           &none         &none         &none         &none         &none               &none  &none  &none  &none  &none  &none
+&bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR          &kp LG(LS(N2))  &kp C_VOLUME_UP    &kp C_BRI_UP  &none  &none  &none
+&studio_unlock  &none         &none         &none         &none         &bt BT_CLR_ALL      &kp LS(LG(N3))  &kp C_VOLUME_DOWN  &kp C_BRI_DN  &none  &none  &none
+&out OUT_TOG    &none         &none         &none         &none         &none               &kp LS(LG(N4))  &none              &none         &none  &none  &none
+&none           &none         &none         &none         &none         &none               &none           &none              &none         &none  &none  &none
             >;
         };
 
@@ -189,10 +189,10 @@
         keypad {
             display-name = "Keypad";
             bindings = <
-&kp BACKSPACE   &kp KP_SLASH              &kp STAR         &kp KP_MINUS     &kp KP_PLUS      &kp KP_ENTER         &msc SCRL_DOWN   &kp LG(LEFT_BRACKET)  &mmv MOVE_Y(-2000)  &kp LG(RIGHT_BRACKET)  &kp LS(SPACE)  &kp HOME
-&kp KP_NUMLOCK  &kp KP_RIGHT_PARENTHESIS  &kp KP_NUMBER_9  &kp KP_NUMBER_6  &kp KP_NUMBER_3  &kp KP_DOT           &msc SCRL_UP     &mmv MOVE_X(-2000)    &mmv MOVE_Y(2000)   &mmv MOVE_X(2000)      &kp SPACE      &kp END
-&kp ESC         &kp KP_LPAR               &kp KP_NUMBER_8  &kp KP_NUMBER_5  &kp KP_NUMBER_2  &kp KP_COMMA         &msc SCRL_RIGHT  &msc SCRL_LEFT        &kp LEFT_GUI        &kp LEFT_SHIFT         &kp LEFT_ALT   &kp LCTRL
-&tog 6          &kp KP_NUM                &kp KP_NUMBER_7  &kp KP_NUMBER_4  &kp KP_NUMBER_1  &kp KP_NUMBER_0      &mkp LCLK        &mkp RCLK             &none               &none                  &none          &tog 6
+&kp BACKSPACE   &kp KP_SLASH              &kp STAR         &kp KP_MINUS     &kp KP_PLUS      &kp KP_ENTER         &msc MOVE_Y(20)   &kp LG(LEFT_BRACKET)  &mmv MOVE_Y(-2000)  &kp LG(RIGHT_BRACKET)  &kp LS(SPACE)  &kp HOME
+&kp KP_NUMLOCK  &kp KP_RIGHT_PARENTHESIS  &kp KP_NUMBER_9  &kp KP_NUMBER_6  &kp KP_NUMBER_3  &kp KP_DOT           &msc MOVE_Y(-20)  &mmv MOVE_X(-2000)    &mmv MOVE_Y(2000)   &mmv MOVE_X(2000)      &kp SPACE      &kp END
+&kp ESC         &kp KP_LPAR               &kp KP_NUMBER_8  &kp KP_NUMBER_5  &kp KP_NUMBER_2  &kp KP_COMMA         &msc SCRL_RIGHT   &msc SCRL_LEFT        &kp LEFT_GUI        &kp LEFT_SHIFT         &kp LEFT_ALT   &kp LCTRL
+&tog 6          &kp KP_NUM                &kp KP_NUMBER_7  &kp KP_NUMBER_4  &kp KP_NUMBER_1  &kp KP_NUMBER_0      &mkp LCLK         &mkp RCLK             &none               &none                  &none          &tog 6
             >;
         };
 

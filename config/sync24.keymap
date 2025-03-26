@@ -91,34 +91,6 @@
             bindings = <&tog 0 &tog 3>;
             label = "NEW_MACRO";
         };
-
-        mouse_upleft: upleft {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&mmv MOVE_X(-500) &mmv MOVE_Y(-500)>;
-            label = "UPLEFT";
-        };
-
-        mouse_UpRight: mouse_UpRight {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&mmv MOVE_X(500) &mmv MOVE_Y(-500)>;
-            label = "MOUSE_UPRIGHT";
-        };
-
-        mouse_downright: mouse_downright {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&mmv MOVE_X(500) &mmv MOVE_Y(500)>;
-            label = "MOUSE_DOWNRIGHT";
-        };
-
-        mouse_downleft: mouse_downleft {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&mmv MOVE_X(-500) &mmv MOVE_Y(500)>;
-            label = "MOUSE_DOWNLEFT";
-        };
     };
 
     behaviors {

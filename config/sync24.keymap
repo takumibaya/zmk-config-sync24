@@ -119,7 +119,7 @@
 &kp TAB    &none      &kp L        &kp U       &kp COMMA     &kp DOT           &kp F         &kp W         &kp R       &kp Y        &none  &kp BACKSPACE
 &kp Q      &kp E      &mt LCTRL I  &mt LALT A  &mt LSHIFT O  &kp MINUS         &kp K         &mt RSHIFT T  &mt RALT N  &mt RCTRL S  &kp H  &kp P
 &kp LSHFT  &kp Z      &kp X        &kp C       &kp V         &kp SEMI          &kp G         &kp D         &kp M       &kp J        &kp B  &kp RSHIFT
-&tog 5     &kp LCTRL  &kp LALT     &kp LCMD    &lt 1 BSPC    &mt LCMD RET      &mt RCMD TAB  &lt 2 SPACE   &kp RCMD    &kp RALT     &none  &tog 5
+&tog 5     &kp LCTRL  &kp LALT     &kp LCMD    &lt 1 BSPC    &mt LCMD RET      &mt RCMD TAB  &lt 2 SPACE   &kp RCMD    &kp RALT     &none  &tog 6
             >;
         };
 
@@ -167,18 +167,19 @@
             display-name = "Keypad";
             bindings = <
 &kp BACKSPACE   &kp KP_SLASH              &kp STAR         &kp KP_MINUS     &kp KP_PLUS      &kp KP_ENTER         &msc SCRL_DOWN   &kp LG(LEFT_BRACKET)  &mmv MOVE_Y(-1600)  &kp LG(RIGHT_BRACKET)  &kp LS(SPACE)  &kp HOME
-&kp KP_NUMLOCK  &kp KP_RIGHT_PARENTHESIS  &kp KP_NUMBER_9  &kp KP_NUMBER_6  &kp KP_NUMBER_3  &kp KP_DOT           &msc SCRL_UP     &mmv MOVE_X(-1600)     &mmv MOVE_Y(1600)   &mmv MOVE_X(1600)      &kp SPACE      &kp END
+&kp KP_NUMLOCK  &kp KP_RIGHT_PARENTHESIS  &kp KP_NUMBER_9  &kp KP_NUMBER_6  &kp KP_NUMBER_3  &kp KP_DOT           &msc SCRL_UP     &mmv MOVE_X(-1600)    &mmv MOVE_Y(1600)   &mmv MOVE_X(1600)      &kp SPACE      &kp END
 &kp ESC         &kp KP_LPAR               &kp KP_NUMBER_8  &kp KP_NUMBER_5  &kp KP_NUMBER_2  &kp KP_COMMA         &msc SCRL_RIGHT  &msc SCRL_LEFT        &kp LEFT_GUI        &kp LEFT_SHIFT         &kp LEFT_ALT   &kp LCTRL
 &tog 5          &kp KP_NUM                &kp KP_NUMBER_7  &kp KP_NUMBER_4  &kp KP_NUMBER_1  &kp KP_NUMBER_0      &mkp LCLK        &mkp RCLK             &none               &none                  &none          &tog 5
             >;
         };
 
-        layer_6 {
+        mouse {
+            display-name = "Keypad";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &msc SCRL_DOWN   &kp LG(LEFT_BRACKET)  &mmv MOVE_Y(-1600)  &kp LG(RIGHT_BRACKET)  &kp LS(SPACE)  &kp HOME
+&trans  &trans  &trans  &trans  &trans  &trans      &msc SCRL_UP     &mmv MOVE_X(-1600)    &mmv MOVE_Y(1600)   &mmv MOVE_X(1600)      &kp SPACE      &kp END
+&trans  &trans  &trans  &trans  &trans  &trans      &msc SCRL_RIGHT  &msc SCRL_LEFT        &kp LEFT_GUI        &kp LEFT_SHIFT         &kp LEFT_ALT   &kp LCTRL
+&trans  &trans  &trans  &trans  &trans  &trans      &mkp LCLK        &mkp RCLK             &none               &none                  &none          &tog 5
             >;
         };
     };

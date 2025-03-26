@@ -166,8 +166,8 @@
         keypad {
             display-name = "Keypad";
             bindings = <
-&kp BACKSPACE   &kp KP_SLASH              &kp STAR         &kp KP_MINUS     &kp KP_PLUS      &kp KP_ENTER         &msc SCRL_DOWN   &kp LG(LEFT_BRACKET)  &mmv MOVE_Y(-1000)  &kp LG(RIGHT_BRACKET)  &kp LS(SPACE)  &kp HOME
-&kp KP_NUMLOCK  &kp KP_RIGHT_PARENTHESIS  &kp KP_NUMBER_9  &kp KP_NUMBER_6  &kp KP_NUMBER_3  &kp KP_DOT           &msc SCRL_UP     &mmv MOVE_X(-600)     &mmv MOVE_Y(1000)   &mmv MOVE_X(1000)      &kp SPACE      &kp END
+&kp BACKSPACE   &kp KP_SLASH              &kp STAR         &kp KP_MINUS     &kp KP_PLUS      &kp KP_ENTER         &msc SCRL_DOWN   &kp LG(LEFT_BRACKET)  &mmv MOVE_Y(-1050)  &kp LG(RIGHT_BRACKET)  &kp LS(SPACE)  &kp HOME
+&kp KP_NUMLOCK  &kp KP_RIGHT_PARENTHESIS  &kp KP_NUMBER_9  &kp KP_NUMBER_6  &kp KP_NUMBER_3  &kp KP_DOT           &msc SCRL_UP     &mmv MOVE_X(-1050)     &mmv MOVE_Y(1050)   &mmv MOVE_X(1050)      &kp SPACE      &kp END
 &kp ESC         &kp KP_LPAR               &kp KP_NUMBER_8  &kp KP_NUMBER_5  &kp KP_NUMBER_2  &kp KP_COMMA         &msc SCRL_RIGHT  &msc SCRL_LEFT        &kp LEFT_GUI        &kp LEFT_SHIFT         &kp LEFT_ALT   &kp LCTRL
 &tog 5          &kp KP_NUM                &kp KP_NUMBER_7  &kp KP_NUMBER_4  &kp KP_NUMBER_1  &kp KP_NUMBER_0      &mkp LCLK        &mkp RCLK             &none               &none                  &none          &tog 5
             >;

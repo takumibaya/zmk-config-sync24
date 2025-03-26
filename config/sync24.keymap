@@ -78,6 +78,23 @@
         };
     };
 
+    macros {
+        mouse: new_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp RIGHT_ALT>,
+                <&macro_tap>,
+                <&macro_tap>,
+                <&macro_tap>,
+                <&macro_tap>,
+                <&macro_tap>,
+                <&tog 5>;
+
+            label = "NEW_MACRO";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -88,18 +105,18 @@
             bindings = <
 &kp TAB    &none      &kp L        &kp U       &kp COMMA     &kp DOT           &kp F         &kp W         &kp R       &kp Y        &none  &kp BACKSPACE
 &kp Q      &kp E      &mt LCTRL I  &mt LALT A  &mt LSHIFT O  &kp MINUS         &kp K         &mt RSHIFT T  &mt RALT N  &mt RCTRL S  &kp H  &kp P
-&kp LSHFT  &kp Z      &kp X        &kp C       &kp V         &kp B             &kp G         &kp D         &kp M       &kp J        &kp B  &kp RSHIFT
-&kp LCTRL  &kp LCTRL  &kp LALT     &kp LCMD    &lt 1 BSPC    &mt LCMD RET      &mt RCMD TAB  &lt 2 SPACE   &kp RCMD    &kp RALT     &none  &kp RCTRL
+&kp LSHFT  &kp Z      &kp X        &kp C       &kp V         &kp SEMI          &kp G         &kp D         &kp M       &kp J        &kp B  &kp RSHIFT
+&kp LCTRL  &kp LCTRL  &kp LALT     &kp LCMD    &lt 1 BSPC    &mt LCMD RET      &mt RCMD TAB  &lt 2 SPACE   &kp RCMD    &kp RALT     &none  &mouse
             >;
         };
 
         num {
             display-name = "Num";
             bindings = <
-&kp ESC    &kp TILDE  &kp N1  &kp N2  &kp N3  &none        &kp CARET  &kp LT           &kp EQUAL       &kp GT          &kp PRCNT  &none
-&kp LCTRL  &kp N0     &kp N4  &kp N5  &kp N6  &none        &none      &mt RSHIFT PLUS  &mt RALT MINUS  &mt RCTRL STAR  &kp FSLH   &none
-&trans     &kp DLLR   &kp N7  &kp N8  &kp N9  &kp DOT      &kp UNDER  &kp EXCL         &kp QMARK       &kp COLON       &kp SEMI   &none
-&trans     &trans     &trans  &trans  &none   &trans       &trans     &lt 3 SPACE      &trans          &trans          &trans     &trans
+&kp ESC    &kp TILDE  &kp N1  &kp N2  &kp N3  &none          &kp CARET  &kp LT           &kp EQUAL       &kp GT          &kp PRCNT  &none
+&kp LCTRL  &kp N0     &kp N4  &kp N5  &kp N6  &kp DOT        &kp TILDE  &mt RSHIFT PLUS  &mt RALT MINUS  &mt RCTRL STAR  &kp FSLH   &none
+&trans     &kp DLLR   &kp N7  &kp N8  &kp N9  &kp COMMA      &kp UNDER  &kp EXCL         &kp QMARK       &kp COLON       &kp SEMI   &none
+&trans     &trans     &trans  &trans  &none   &trans         &trans     &lt 3 SPACE      &trans          &trans          &trans     &trans
             >;
         };
 
@@ -136,10 +153,10 @@
         util {
             display-name = "Util";
             bindings = <
-&bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR          &none  &none              &mmv MOVE_Y(200)   &none             &msc MOVE_Y(10)   &none
-&studio_unlock  &none         &none         &none         &none         &bt BT_CLR_ALL      &none  &mmv MOVE_X(-200)  &mmv MOVE_Y(-200)  &mmv MOVE_X(200)  &msc MOVE_Y(-10)  &none
-&out OUT_TOG    &none         &none         &none         &none         &none               &none  &mkp LCLK          &mkp MCLK          &mkp RCLK         &none             &none
-&none           &none         &none         &none         &none         &none               &none  &none              &none              &none             &none             &none
+&bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR          &none            &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &msc MOVE_Y(10)   &none
+&studio_unlock  &none         &none         &none         &none         &bt BT_CLR_ALL      &none            &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &msc MOVE_Y(-10)  &none
+&out OUT_TOG    &none         &none         &none         &none         &none               &mkp MCLK        &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &none             &none
+&none           &none         &none         &none         &none         &none               &kp KP_NUMBER_5  &mkp RCLK        &kp KP_NUMBER_0  &none            &none             &mouse
             >;
         };
     };

@@ -148,7 +148,7 @@
 &kp TAB    &none      &kp L        &kp U       &kp COMMA     &kp DOT           &kp F         &kp W         &kp R       &kp Y        &none  &kp BACKSPACE
 &kp Q      &kp E      &mt LCTRL I  &mt LALT A  &mt LSHIFT O  &kp MINUS         &kp K         &mt RSHIFT T  &mt RALT N  &mt RCTRL S  &kp H  &kp P
 &kp LSHFT  &kp Z      &kp X        &kp C       &kp V         &kp SEMI          &kp G         &kp D         &kp M       &kp J        &kp B  &kp RSHIFT
-&tog 5     &kp LCTRL  &kp LALT     &kp LCMD    &lt 1 BSPC    &mt LCMD RET      &mt RCMD TAB  &lt 2 SPACE   &kp RCMD    &kp RALT     &none  &tog 3
+&tog 5     &kp LCTRL  &kp LALT     &kp LCMD    &lt 1 BSPC    &mt LCMD RET      &mt RCMD TAB  &lt 2 SPACE   &kp RCMD    &kp RALT     &none  &tog 5
             >;
         };
 
@@ -195,10 +195,10 @@
         keypad {
             display-name = "Keypad";
             bindings = <
-&kp BACKSPACE   &kp KP_SLASH     &kp STAR         &kp KP_MINUS     &kp KP_PLUS      &kp KP_ENTER         &none  &none  &none  &none  &none  &none
-&kp KP_NUMLOCK  &kp KP_NUMBER_9  &kp KP_NUMBER_9  &kp KP_NUMBER_6  &kp KP_NUMBER_3  &kp KP_DOT           &none  &none  &none  &none  &none  &none
-&kp KP_NUM      &kp KP_NUMBER_8  &kp KP_NUMBER_8  &kp KP_NUMBER_5  &kp KP_NUMBER_2  &kp KP_COMMA         &none  &none  &none  &none  &none  &none
-&tog 5          &kp KP_NUMBER_7  &kp KP_NUMBER_7  &kp KP_NUMBER_4  &kp KP_NUMBER_1  &kp KP_NUMBER_0      &none  &none  &none  &none  &none  &none
+&kp BACKSPACE   &kp KP_SLASH              &kp STAR         &kp KP_MINUS     &kp KP_PLUS      &kp KP_ENTER         &msc SCRL_UP    &kp LG(LEFT_BRACKET)  &mmv MOVE_UP    &kp LG(RIGHT_BRACKET)  &kp LS(SPACE)  &kp HOME
+&kp KP_NUMLOCK  &kp KP_RIGHT_PARENTHESIS  &kp KP_NUMBER_9  &kp KP_NUMBER_6  &kp KP_NUMBER_3  &kp KP_DOT           &msc SCRL_DOWN  &mmv MOVE_LEFT        &mmv MOVE_DOWN  &mmv MOVE_RIGHT        &kp SPACE      &kp END
+&kp ESC         &kp KP_LPAR               &kp KP_NUMBER_8  &kp KP_NUMBER_5  &kp KP_NUMBER_2  &kp KP_COMMA         &msc SCRL_LEFT  &msc SCRL_RIGHT       &none           &none                  &none          &none
+&tog 5          &kp KP_NUM                &kp KP_NUMBER_7  &kp KP_NUMBER_4  &kp KP_NUMBER_1  &kp KP_NUMBER_0      &mkp LCLK       &mkp RCLK             &none           &none                  &none          &tog 5
             >;
         };
 

@@ -178,19 +178,16 @@
 &kp KP_ENTER  &kp KP_CLEAR  &kp KP_PLUS  &kp KP_MINUS  &kp KP_DIVIDE  &none      &none  &none  &none  &none  &none  &none
             >;
         };
-    };
 
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-
-        function-num {
-            if-layers = <1>;
-            then-layer = <3>;
-        };
-
-        function-navi {
-            if-layers = <2>;
-            then-layer = <3>;
+        layer_6 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+            >;
         };
     };
+
+    conditional_layers { compatible = "zmk,conditional-layers"; };
 };

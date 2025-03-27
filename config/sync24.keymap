@@ -51,13 +51,13 @@
 
         combo_us {
             timeout-ms = <50>;
-            key-positions = <15 16>;
+            key-positions = <4 3>;
             bindings = <&kp LANG2>;
         };
 
         combo_kana {
             timeout-ms = <50>;
-            key-positions = <19 20>;
+            key-positions = <7 8>;
             bindings = <&kp LANG1>;
         };
 

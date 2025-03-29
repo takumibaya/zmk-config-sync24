@@ -131,7 +131,7 @@
 &kp TAB    &none      &kp L        &kp U       &kp COMMA     &kp DOT           &kp F         &kp W         &kp R       &kp Y        &none      &kp BACKSPACE
 &kp Q      &kp E      &mt LCTRL I  &mt LALT A  &mt LSHIFT O  &kp MINUS         &kp K         &mt RSHIFT T  &mt RALT N  &mt RCTRL S  &kp H      &kp P
 &kp LSHFT  &kp Z      &kp X        &kp C       &kp V         &kp SEMI          &kp G         &kp D         &kp M       &kp J        &kp B      &kp RSHIFT
-&tog 7     &kp LCTRL  &kp LALT     &kp LCMD    &lt 2 BSPC    &mt LCMD RET      &mt RCMD TAB  &lt 3 SPACE   &kp RCMD    &kp RALT     &kp RCTRL  &tog 7
+&mo 7      &kp LCTRL  &kp LALT     &kp LCMD    &lt 2 BSPC    &mt LCMD RET      &mt RCMD TAB  &lt 3 SPACE   &kp RCMD    &kp RALT     &kp RCTRL  &tog 7
             >;
         };
 

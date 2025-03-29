@@ -212,8 +212,8 @@
             label = "mouse2";
             display-name = "mouse2";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans      &msc MOVE_Y(5)  &kp LG(LEFT_BRACKET)  &mmv MOVE_Y(-400)  &kp LG(RIGHT_BRACKET)  &kp LS(SPACE)  &kp HOME
-&trans  &trans  &trans  &trans  &trans  &trans      &msc MOVE_Y(5)  &mmv MOVE_X(400)      &mmv MOVE_Y(400)   &mmv MOVE_X(400)       &kp SPACE      &kp END
+&trans  &trans  &trans  &trans  &trans  &trans      &msc MOVE_Y(5)  &kp LG(LEFT_BRACKET)  &mmv MOVE_Y(-600)  &kp LG(RIGHT_BRACKET)  &kp LS(SPACE)  &kp HOME
+&trans  &trans  &trans  &trans  &trans  &trans      &msc MOVE_Y(5)  &mmv MOVE_X(-600)     &mmv MOVE_Y(600)   &mmv MOVE_X(600)       &kp SPACE      &kp END
 &trans  &trans  &trans  &trans  &trans  &trans      &none           &msc SCRL_LEFT        &msc SCRL_RIGHT    &kp LEFT_SHIFT         &kp LEFT_ALT   &kp LCTRL
 &trans  &trans  &trans  &trans  &trans  &trans      &mkp LCLK       &mkp RCLK             &none              &none                  &none          &tog 7
             >;

@@ -80,7 +80,7 @@
 
         keypad {
             bindings = <&tog 6>;
-            key-positions = <0 12 24 36>;
+            key-positions = <0 12 24 37>;
         };
 
         QWERTY {

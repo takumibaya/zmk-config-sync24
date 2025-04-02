@@ -179,7 +179,7 @@
         function {
             display-name = "function";
             bindings = <
-&none  &kp LA(LS(V))  &kp RA(LC(Q))  &kp LC(RA(W))  &kp LC(RA(E))  &kp LC(LS(LEFT_ARROW))       &kp F1  &kp F2   &kp F3   &kp F4   &none  &none
+&none  &kp LA(LC(R))  &kp RA(LC(Q))  &kp LC(RA(W))  &kp LC(RA(E))  &kp LC(LS(LEFT_ARROW))       &kp F1  &kp F2   &kp F3   &kp F4   &none  &none
 &none  &kp LC(RA(F))  &kp LC(RA(A))  &kp LC(RA(S))  &kp LC(RA(D))  &kp LC(LS(RIGHT_ARROW))      &kp F5  &kp F6   &kp F7   &kp F8   &none  &none
 &none  &kp LC(LA(V))  &kp LC(RA(Z))  &kp LC(RA(X))  &kp LC(RA(C))  &none                        &kp F9  &kp F10  &kp F11  &kp F12  &none  &none
 &none  &none          &none          &none          &none          &none                        &none   &none    &none    &none    &none  &none

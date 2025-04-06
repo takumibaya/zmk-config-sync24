@@ -80,12 +80,17 @@
 
         keypad {
             bindings = <&tog 6>;
-            key-positions = <0 12 24 37>;
+            key-positions = <36 12>;
         };
 
         QWERTY {
             bindings = <&QWERTY>;
-            key-positions = <37 46>;
+            key-positions = <46 37>;
+        };
+
+        daw {
+            bindings = <&tog 9>;
+            key-positions = <36 24>;
         };
     };
 
@@ -159,10 +164,10 @@
         navigation {
             display-name = "navigation";
             bindings = <
-&trans     &trans    &kp LBKT        &kp DOT       &kp RBKT        &kp AT_SIGN      &none   &kp ESC   &kp UP    &kp CAPS   &kp PG_UP  &kp HOME
-&kp LCTRL  &kp HASH  &mt LCTRL LPAR  &mt LALT SQT  &mt LSHFT RPAR  &kp AMPS         &none   &kp LEFT  &kp DOWN  &kp RIGHT  &kp PG_DN  &kp END
-&trans     &kp BSLH  &kp LBRC        &kp GRAVE     &kp RBRC        &kp PIPE         &none   &none     &none     &none      &none      &none
-&trans     &trans    &trans          &trans        &lt 5 DEL       &trans           &trans  &none     &trans    &trans     &trans     &trans
+&trans     &kp GRAVE  &kp LBKT        &kp DOT            &kp RBKT        &kp AT_SIGN      &none   &kp ESC   &kp UP    &kp CAPS   &kp PG_UP  &kp HOME
+&kp LCTRL  &kp HASH   &mt LCTRL LPAR  &mt LALT SQT       &mt LSHFT RPAR  &kp AMPS         &none   &kp LEFT  &kp DOWN  &kp RIGHT  &kp PG_DN  &kp END
+&trans     &kp BSLH   &kp LBRC        &kp DOUBLE_QUOTES  &kp RBRC        &kp PIPE         &none   &none     &none     &none      &none      &none
+&trans     &trans     &trans          &trans             &lt 5 DEL       &trans           &trans  &none     &trans    &trans     &trans     &trans
             >;
         };
 
@@ -208,7 +213,7 @@
             label = "mouse";
         };
 
-        layer_8 {
+        mouse2 {
             label = "mouse2";
             display-name = "mouse2";
             bindings = <
@@ -216,6 +221,15 @@
 &trans  &trans  &trans  &trans  &trans  &trans      &msc MOVE_Y(5)  &mmv MOVE_X(-600)     &mmv MOVE_Y(600)   &mmv MOVE_X(600)       &kp SPACE      &kp END
 &trans  &trans  &trans  &trans  &trans  &trans      &none           &msc SCRL_RIGHT       &msc SCRL_LEFT     &kp LEFT_SHIFT         &kp LEFT_ALT   &kp LCTRL
 &trans  &trans  &trans  &trans  &trans  &trans      &mkp LCLK       &mkp RCLK             &none              &none                  &none          &tog 7
+            >;
+        };
+
+        layer_9 {
+            bindings = <
+&trans  &kp Q   &kp W   &kp E   &kp R   &kp T               &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp A   &kp S   &kp D   &kp F   &kp G               &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp Z   &kp X   &kp C   &kp V   &kp B               &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &mt LCMD SPACE      &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
     };

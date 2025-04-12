@@ -108,6 +108,38 @@
             bindings = <&tog 1 &tog 0>;
             label = "QWERTY";
         };
+
+        zh_left: zh {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LANGUAGE_1>, <&macro_wait_time 50>, <&kp Z &kp H>;
+
+            label = "ZH";
+        };
+
+        zk_up: zk {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LANGUAGE_1>, <&macro_wait_time 50>, <&kp Z &kp K>;
+
+            label = "ZK";
+        };
+
+        zj_down: zj_down {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LANGUAGE_1>, <&macro_wait_time 50>, <&kp Z &kp J>;
+
+            label = "ZJ_DOWN";
+        };
+
+        zl_right: zl_right {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LANGUAGE_1>, <&macro_wait_time 50>, <&kp Z &kp L>;
+
+            label = "ZL_RIGHT";
+        };
     };
 
     behaviors {
@@ -133,19 +165,19 @@
         base {
             display-name = "Base";
             bindings = <
-&kp TAB           &kp Q      &kp L        &kp U       &kp COMMA     &kp DOT           &kp F         &kp W         &kp R       &kp Y        &kp P      &kp BACKSPACE
-&kp LEFT_CONTROL  &kp E      &mt LCTRL I  &mt LALT A  &mt LSHIFT O  &kp MINUS         &kp K         &mt RSHIFT T  &mt RALT N  &mt RCTRL S  &kp H      &kp RIGHT_CONTROL
-&kp LSHFT         &kp Z      &kp X        &kp C       &kp V         &kp SEMI          &kp G         &kp D         &kp M       &kp J        &kp B      &kp RSHIFT
-&mo 7             &kp LCTRL  &kp LALT     &kp LCMD    &lt 2 BSPC    &mt LCMD RET      &mt RCMD TAB  &lt 3 SPACE   &kp RCMD    &kp RALT     &kp RCTRL  &tog 7
+&kp TAB           &kp Q         &kp L         &kp U       &kp COMMA     &kp DOT           &kp F         &kp W         &kp R       &kp Y          &kp P          &kp BACKSPACE
+&kp LEFT_CONTROL  &kp E         &mt LCTRL I   &mt LALT A  &mt LSHIFT O  &kp MINUS         &kp K         &mt RSHIFT T  &mt RALT N  &mt RCTRL S    &kp H          &kp RIGHT_CONTROL
+&kp LSHFT         &kp Z         &kp X         &kp C       &kp V         &kp SEMI          &kp G         &kp D         &kp M       &kp J          &kp B          &kp RSHIFT
+&kp LCTRL         &kp LEFT_ALT  &kp LEFT_GUI  &mo 7       &lt 2 BSPC    &mt LCMD RET      &mt RCMD TAB  &lt 3 SPACE   &tog 7      &kp RIGHT_GUI  &kp RIGHT_ALT  &kp RCTRL
             >;
         };
 
         QWERTY {
             bindings = <
-&kp TAB    &kp Q      &kp W     &kp E     &kp R            &kp T                   &kp Y              &kp U        &kp I      &kp O     &kp P      &kp BSPC
-&kp LCTRL  &kp A      &kp S     &kp D     &kp F            &kp G                   &kp H              &kp J        &kp K      &kp L     &kp MINUS  &kp RET
-&kp LSHFT  &kp Z      &kp X     &kp C     &kp V            &kp B                   &kp N              &kp M        &kp COMMA  &kp DOT   &kp FSLH   &kp RSHFT
-&mo 7      &kp LCTRL  &kp LALT  &kp LGUI  &lt 2 BACKSPACE  &mt LEFT_GUI ENTER      &mt RIGHT_GUI TAB  &lt 3 SPACE  &kp RGUI   &kp RALT  &kp RCTRL  &tog 7
+&kp TAB    &kp Q         &kp W         &kp E  &kp R            &kp T                   &kp Y              &kp U        &kp I      &kp O          &kp P          &kp BSPC
+&kp LCTRL  &kp A         &kp S         &kp D  &kp F            &kp G                   &kp H              &kp J        &kp K      &kp L          &kp MINUS      &kp RET
+&kp LSHFT  &kp Z         &kp X         &kp C  &kp V            &kp B                   &kp N              &kp M        &kp COMMA  &kp DOT        &kp FSLH       &kp RSHFT
+&kp LCTRL  &kp LEFT_ALT  &kp LEFT_GUI  &mo 7  &lt 2 BACKSPACE  &mt LEFT_GUI ENTER      &mt RIGHT_GUI TAB  &lt 3 SPACE  &mo 7      &kp RIGHT_GUI  &kp RIGHT_ALT  &kp RCTRL
             >;
 
             label = "qwerty";
@@ -164,10 +196,10 @@
         navigation {
             display-name = "navigation";
             bindings = <
-&trans     &kp GRAVE  &kp LBKT        &kp DOT            &kp RBKT        &kp AT_SIGN      &none   &kp ESC   &kp UP    &kp CAPS   &kp PG_UP  &kp HOME
-&kp LCTRL  &kp HASH   &mt LCTRL LPAR  &mt LALT SQT       &mt LSHFT RPAR  &kp AMPS         &none   &kp LEFT  &kp DOWN  &kp RIGHT  &kp PG_DN  &kp END
-&trans     &kp BSLH   &kp LBRC        &kp DOUBLE_QUOTES  &kp RBRC        &kp PIPE         &none   &none     &none     &none      &none      &none
-&trans     &trans     &trans          &trans             &lt 5 DEL       &trans           &trans  &none     &trans    &trans     &trans     &trans
+&trans     &kp GRAVE  &kp LBKT        &kp SQT            &kp RBKT        &kp AT_SIGN      &zk_up    &kp ESC   &kp UP    &kp CAPS   &kp PG_UP  &kp HOME
+&kp LCTRL  &kp HASH   &mt LCTRL LPAR  &mt LALT SQT       &mt LSHFT RPAR  &kp AMPS         &zj_down  &kp LEFT  &kp DOWN  &kp RIGHT  &kp PG_DN  &kp END
+&trans     &kp BSLH   &kp LBRC        &kp DOUBLE_QUOTES  &kp RBRC        &kp PIPE         &zh_left  &zj_down  &none     &none      &none      &none
+&trans     &trans     &trans          &trans             &lt 5 DEL       &trans           &trans    &none     &trans    &trans     &trans     &trans
             >;
         };
 
@@ -206,8 +238,8 @@
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans      &msc MOVE_Y(-20)  &kp LG(LEFT_BRACKET)  &mmv MOVE_Y(-2000)  &kp LG(RIGHT_BRACKET)  &kp LS(SPACE)  &kp HOME
 &trans  &trans  &trans  &trans  &trans  &trans      &msc MOVE_Y(20)   &mmv MOVE_X(-2000)    &mmv MOVE_Y(2000)   &mmv MOVE_X(2000)      &kp SPACE      &kp END
-&trans  &trans  &trans  &trans  &trans  &trans      &mo 8             &msc SCRL_RIGHT       &msc SCRL_LEFT      &kp LEFT_SHIFT         &kp LEFT_ALT   &kp LCTRL
-&trans  &trans  &trans  &trans  &trans  &trans      &mkp LCLK         &mkp RCLK             &none               &none                  &none          &tog 7
+&trans  &trans  &trans  &trans  &trans  &trans      &mo 8             &msc SCRL_RIGHT       &mkp MCLK           &msc SCRL_LEFT         &kp LEFT_ALT   &kp LCTRL
+&trans  &trans  &trans  &trans  &trans  &trans      &mkp LCLK         &mkp RCLK             &tog 7              &none                  &none          &none
             >;
 
             label = "mouse";
@@ -217,10 +249,10 @@
             label = "mouse2";
             display-name = "mouse2";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans      &msc MOVE_Y(5)  &kp LG(LEFT_BRACKET)  &mmv MOVE_Y(-600)  &kp LG(RIGHT_BRACKET)  &kp LS(SPACE)  &kp HOME
-&trans  &trans  &trans  &trans  &trans  &trans      &msc MOVE_Y(5)  &mmv MOVE_X(-600)     &mmv MOVE_Y(600)   &mmv MOVE_X(600)       &kp SPACE      &kp END
-&trans  &trans  &trans  &trans  &trans  &trans      &none           &msc SCRL_RIGHT       &msc SCRL_LEFT     &kp LEFT_SHIFT         &kp LEFT_ALT   &kp LCTRL
-&trans  &trans  &trans  &trans  &trans  &trans      &mkp LCLK       &mkp RCLK             &none              &none                  &none          &tog 7
+&trans  &trans  &trans  &trans  &trans  &trans      &msc MOVE_Y(-5)  &kp LG(LEFT_BRACKET)  &mmv MOVE_Y(-600)  &kp LG(RIGHT_BRACKET)  &kp LS(SPACE)  &kp HOME
+&trans  &trans  &trans  &trans  &trans  &trans      &msc MOVE_Y(5)   &mmv MOVE_X(-600)     &mmv MOVE_Y(600)   &mmv MOVE_X(600)       &kp SPACE      &kp END
+&trans  &trans  &trans  &trans  &trans  &trans      &none            &msc SCRL_LEFT        &mkp MCLK          &msc SCRL_RIGHT        &kp LEFT_ALT   &kp LCTRL
+&trans  &trans  &trans  &trans  &trans  &trans      &mkp LCLK        &mkp RCLK             &tog 7             &none                  &none          &none
             >;
         };
 
@@ -230,6 +262,24 @@
 &trans  &kp A   &kp S   &kp D   &kp F   &kp G               &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &kp Z   &kp X   &kp C   &kp V   &kp B               &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &mt LCMD SPACE      &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        layer_10 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        layer_11 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
     };

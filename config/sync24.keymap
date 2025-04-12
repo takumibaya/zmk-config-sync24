@@ -112,7 +112,7 @@
         zh_left: zh {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LANGUAGE_1>, <&macro_wait_time 5>, <&kp Z &kp H>;
+            bindings = <&kp LANGUAGE_1>, <&macro_wait_time 2>, <&kp Z &kp H>;
 
             label = "ZH";
         };
@@ -120,7 +120,7 @@
         zk_up: zk {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LANGUAGE_1>, <&macro_wait_time 5>, <&kp Z &kp K>;
+            bindings = <&kp LANGUAGE_1>, <&macro_wait_time 2>, <&kp Z &kp K>;
 
             label = "ZK";
         };
@@ -128,7 +128,7 @@
         zj_down: zj_down {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LANGUAGE_1>, <&macro_wait_time 5>, <&kp Z &kp J>;
+            bindings = <&kp LANGUAGE_1>, <&macro_wait_time 2>, <&kp Z &kp J>;
 
             label = "ZJ_DOWN";
         };
@@ -136,9 +136,22 @@
         zl_right: zl_right {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LANGUAGE_1>, <&macro_wait_time 5>, <&kp Z &kp L>;
+            bindings = <&kp LANGUAGE_1>, <&macro_wait_time 2>, <&kp Z &kp L>;
 
             label = "ZL_RIGHT";
+        };
+
+        nakaguro: nakaguro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp LANGUAGE_1>,
+                <&macro_wait_time 2>,
+                <&kp SLASH>,
+                <&macro_wait_time 2>,
+                <&kp LANGUAGE_2>;
+
+            label = "NAKAGURO";
         };
     };
 
@@ -168,7 +181,7 @@
 &kp TAB           &kp Q         &kp L         &kp U       &kp COMMA     &kp DOT           &kp F         &kp W         &kp R       &kp Y          &kp P          &kp BACKSPACE
 &kp LEFT_CONTROL  &kp E         &mt LCTRL I   &mt LALT A  &mt LSHIFT O  &kp MINUS         &kp K         &mt RSHIFT T  &mt RALT N  &mt RCTRL S    &kp H          &kp RIGHT_CONTROL
 &kp LSHFT         &kp Z         &kp X         &kp C       &kp V         &kp SEMI          &kp G         &kp D         &kp M       &kp J          &kp B          &kp RSHIFT
-&kp LCTRL         &kp LEFT_ALT  &kp LEFT_GUI  &mo 7       &lt 2 BSPC    &mt LCMD RET      &mt RCMD TAB  &lt 3 SPACE   &tog 7      &kp RIGHT_GUI  &kp RIGHT_ALT  &kp RCTRL
+&mo 7             &kp LEFT_ALT  &kp LEFT_GUI  &mo 7       &lt 2 BSPC    &mt LCMD RET      &mt RCMD TAB  &lt 3 SPACE   &tog 7      &kp RIGHT_GUI  &kp RIGHT_ALT  &tog 7
             >;
         };
 
@@ -196,10 +209,10 @@
         navigation {
             display-name = "navigation";
             bindings = <
-&trans     &kp GRAVE  &kp LBKT        &kp SQT            &kp RBKT        &kp AT_SIGN      &zk_up    &kp ESC   &kp UP    &kp CAPS   &kp PG_UP  &kp HOME
-&kp LCTRL  &kp HASH   &mt LCTRL LPAR  &mt LALT SQT       &mt LSHFT RPAR  &kp AMPS         &zj_down  &kp LEFT  &kp DOWN  &kp RIGHT  &kp PG_DN  &kp END
-&trans     &kp BSLH   &kp LBRC        &kp DOUBLE_QUOTES  &kp RBRC        &kp PIPE         &zh_left  &zj_down  &none     &none      &none      &none
-&trans     &trans     &trans          &trans             &lt 5 DEL       &trans           &trans    &none     &trans    &trans     &trans     &trans
+&trans     &kp GRAVE  &kp LBKT        &kp SQT            &kp RBKT        &kp AT_SIGN      &zk_up    &kp ESC    &kp UP    &kp CAPS   &kp PG_UP  &kp HOME
+&kp LCTRL  &kp HASH   &mt LCTRL LPAR  &mt LALT SQT       &mt LSHFT RPAR  &kp AMPS         &zj_down  &kp LEFT   &kp DOWN  &kp RIGHT  &kp PG_DN  &kp END
+&trans     &kp BSLH   &kp LBRC        &kp DOUBLE_QUOTES  &kp RBRC        &kp PIPE         &zh_left  &zl_right  &none     &none      &none      &none
+&trans     &trans     &trans          &trans             &lt 5 DEL       &trans           &trans    &none      &trans    &trans     &trans     &trans
             >;
         };
 

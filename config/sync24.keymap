@@ -5,6 +5,8 @@
 #define ZMK_BEHAVIORS_KEEP_SK
 #define ZMK_BEHAVIORS_KEEP_MT
 #define ZMK_BEHAVIORS_KEEP_KT
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 1800    // default: 600
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 20      // default: 10
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>

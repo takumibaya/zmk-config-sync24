@@ -174,9 +174,9 @@
             label = "MOUS_MOVEUP";
             #binding-cells = <0>;
             bindings =
-                <&mmv MOVE_Y(-1000)>,
                 <&mmv MOVE_Y(-1200)>,
-                <&mmv MOVE_Y(-2000)>;
+                <&mmv MOVE_Y(-2000)>,
+                <&mmv MOVE_Y(-600)>;
 
             tapping-term-ms = <250>;
         };
@@ -186,9 +186,9 @@
             label = "MOUSE_MOVEDOWN";
             #binding-cells = <0>;
             bindings =
-                <&mmv MOVE_Y(1000)>,
                 <&mmv MOVE_Y(1200)>,
-                <&mmv MOVE_Y(2000)>;
+                <&mmv MOVE_Y(2000)>,
+                <&mmv MOVE_Y(600)>;
 
             tapping-term-ms = <250>;
         };
@@ -198,9 +198,9 @@
             label = "MOUSE_MOVELEFT";
             #binding-cells = <0>;
             bindings =
-                <&mmv MOVE_X(-1000)>,
                 <&mmv MOVE_X(-1200)>,
-                <&mmv MOVE_X(-2000)>;
+                <&mmv MOVE_X(-2000)>,
+                <&mmv MOVE_X(-600)>;
 
             tapping-term-ms = <250>;
         };
@@ -210,9 +210,9 @@
             label = "MOUSE_MOVERIGHT";
             #binding-cells = <0>;
             bindings =
-                <&mmv MOVE_X(1000)>,
                 <&mmv MOVE_X(1200)>,
-                <&mmv MOVE_X(2000)>;
+                <&mmv MOVE_X(2000)>,
+                <&mmv MOVE_X(600)>;
 
             tapping-term-ms = <250>;
         };

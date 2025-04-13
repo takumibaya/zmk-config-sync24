@@ -37,7 +37,10 @@
 &key_repeat {
 };
 
-&mmv { time-to-max-speed-ms = <800>; };
+&mmv {
+    time-to-max-speed-ms = <200>;
+    acceleration-exponent = <2>;
+};
 
 / {
     // キー番号早見表：
@@ -173,9 +176,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "MOUS_MOVEUP";
             #binding-cells = <0>;
-            bindings =
-                <&mmv MOVE_Y(-1200)>,
-                <&mmv MOVE_Y(-2000)>;
+            bindings = <&mmv MOVE_Y(-1200)>, <&mmv MOVE_Y(-2000)>;
 
             tapping-term-ms = <175>;
         };
@@ -184,9 +185,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "MOUSE_MOVEDOWN";
             #binding-cells = <0>;
-            bindings =
-                <&mmv MOVE_Y(1200)>,
-                <&mmv MOVE_Y(2000)>;
+            bindings = <&mmv MOVE_Y(1200)>, <&mmv MOVE_Y(2000)>;
 
             tapping-term-ms = <175>;
         };
@@ -195,9 +194,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "MOUSE_MOVELEFT";
             #binding-cells = <0>;
-            bindings =
-                <&mmv MOVE_X(-1200)>,
-                <&mmv MOVE_X(-2000)>;
+            bindings = <&mmv MOVE_X(-1200)>, <&mmv MOVE_X(-2000)>;
 
             tapping-term-ms = <175>;
         };
@@ -206,9 +203,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "MOUSE_MOVERIGHT";
             #binding-cells = <0>;
-            bindings =
-                <&mmv MOVE_X(1200)>,
-                <&mmv MOVE_X(2000)>;
+            bindings = <&mmv MOVE_X(1200)>, <&mmv MOVE_X(2000)>;
 
             tapping-term-ms = <175>;
         };
@@ -293,10 +288,10 @@
         mouse {
             display-name = "Keypad";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans      &msc MOVE_Y(-20)  &kp LG(LEFT_BRACKET)  &Mous_MoveUp     &kp LG(RIGHT_BRACKET)  &kp LS(SPACE)  &kp HOME
-&trans  &trans  &trans  &trans  &trans  &trans      &msc MOVE_Y(20)   &Mouse_MoveLeft       &Mouse_MoveDown  &Mouse_MoveRight       &kp SPACE      &kp END
-&trans  &trans  &trans  &trans  &trans  &trans      &mkp MCLK         &msc MOVE_X(-100)     &kp LG(R)        &msc MOVE_X(100)       &kp LG(T)      &kp LG(LS(T))
-&trans  &trans  &trans  &trans  &trans  &trans      &mkp LCLK         &mkp RCLK             &mo 8            &kp LC(UP_ARROW)       &kp LC(F12)    &tog 7
+&trans  &trans  &trans  &trans  &trans  &trans      &msc MOVE_Y(-20)  &kp LG(LEFT_BRACKET)  &mmv MOVE_Y(-600)  &kp LG(RIGHT_BRACKET)  &kp LS(SPACE)  &kp HOME
+&trans  &trans  &trans  &trans  &trans  &trans      &msc MOVE_Y(20)   &mmv MOVE_X(-600)     &mmv MOVE_Y(600)   &mmv MOVE_X(600)       &kp SPACE      &kp END
+&trans  &trans  &trans  &trans  &trans  &trans      &mkp MCLK         &msc MOVE_X(-100)     &kp LG(R)          &msc MOVE_X(100)       &kp LG(T)      &kp LG(LS(T))
+&trans  &trans  &trans  &trans  &trans  &trans      &mkp LCLK         &mkp RCLK             &mo 8              &kp LC(UP_ARROW)       &kp LC(F12)    &tog 7
             >;
 
             label = "mouse";

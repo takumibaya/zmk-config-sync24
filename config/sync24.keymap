@@ -173,14 +173,24 @@
             compatible = "zmk,behavior-tap-dance";
             label = "MOUS_MOVEUP";
             #binding-cells = <0>;
-            bindings = <&mmv MOVE_UP>, <&mmv MOVE_Y(-1200)>, <&mmv MOVE_Y(-2000)>;
+            bindings =
+                <&mmv MOVE_UP>,
+                <&mmv MOVE_Y(-1200)>,
+                <&mmv MOVE_Y(-2000)>;
+
+            tapping-term-ms = <500>;
         };
 
         Mouse_MoveDown: Mouse_MoveDown {
             compatible = "zmk,behavior-tap-dance";
             label = "MOUSE_MOVEDOWN";
             #binding-cells = <0>;
-            bindings = <&mmv MOVE_DOWN>, <&mmv MOVE_Y(1200)>, <&mmv MOVE_Y(2000)>;
+            bindings =
+                <&mmv MOVE_DOWN>,
+                <&mmv MOVE_Y(1200)>,
+                <&mmv MOVE_Y(2000)>;
+
+            tapping-term-ms = <500>;
         };
 
         Mouse_MoveLeft: Mouse_MoveLeft {
@@ -191,6 +201,8 @@
                 <&mmv MOVE_LEFT>,
                 <&mmv MOVE_X(-1200)>,
                 <&mmv MOVE_X(-2000)>;
+
+            tapping-term-ms = <500>;
         };
 
         Mouse_MoveRight: Mouse_MoveRight {
@@ -201,6 +213,8 @@
                 <&mmv MOVE_RIGHT>,
                 <&mmv MOVE_X(1200)>,
                 <&mmv MOVE_X(2000)>;
+
+            tapping-term-ms = <500>;
         };
     };
 

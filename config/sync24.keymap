@@ -173,7 +173,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "MOUS_MOVEUP";
             #binding-cells = <0>;
-            bindings = <&mmv MOVE_UP>, <&mmv MOVE_Y(-12;00)>, <&mmv MOVE_Y(-2000)>;
+            bindings = <&mmv MOVE_UP>, <&mmv MOVE_Y(-1200)>, <&mmv MOVE_Y(-2000)>;
         };
 
         Mouse_MoveDown: Mouse_MoveDown {

@@ -168,6 +168,13 @@
             #binding-cells = <1>;
             toggle-mode = "off";
         };
+
+        Mous_Up: Mous_Up {
+            compatible = "zmk,behavior-tap-dance";
+            label = "MOUS_UP";
+            #binding-cells = <0>;
+            bindings = <&mmv MOVE_UP>, <&mmv MOVE_Y(-300)>, <&mmv MOVE_Y(-600)>;
+        };
     };
 
     keymap {
@@ -249,10 +256,10 @@
         mouse {
             display-name = "Keypad";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans      &msc MOVE_Y(-20)  &kp LG(LEFT_BRACKET)  &mmv MOVE_Y(-2000)  &kp LG(RIGHT_BRACKET)  &kp LS(SPACE)  &kp HOME
-&trans  &trans  &trans  &trans  &trans  &trans      &msc MOVE_Y(20)   &mmv MOVE_X(-2000)    &mmv MOVE_Y(2000)   &mmv MOVE_X(2000)      &kp SPACE      &kp END
-&trans  &trans  &trans  &trans  &trans  &trans      &mkp MCLK         &msc MOVE_X(-100)     &kp LG(R)           &msc MOVE_X(100)       &kp LG(T)      &kp LG(LS(T))
-&trans  &trans  &trans  &trans  &trans  &trans      &mkp LCLK         &mkp RCLK             &mo 8               &kp LC(UP_ARROW)       &kp LC(F12)    &tog 7
+&trans  &trans  &trans  &trans  &trans  &trans      &msc MOVE_Y(-20)  &kp LG(LEFT_BRACKET)  &Mous_Up           &kp LG(RIGHT_BRACKET)  &kp LS(SPACE)  &kp HOME
+&trans  &trans  &trans  &trans  &trans  &trans      &msc MOVE_Y(20)   &mmv MOVE_X(-2000)    &mmv MOVE_Y(2000)  &mmv MOVE_X(2000)      &kp SPACE      &kp END
+&trans  &trans  &trans  &trans  &trans  &trans      &mkp MCLK         &msc MOVE_X(-100)     &kp LG(R)          &msc MOVE_X(100)       &kp LG(T)      &kp LG(LS(T))
+&trans  &trans  &trans  &trans  &trans  &trans      &mkp LCLK         &mkp RCLK             &mo 8              &kp LC(UP_ARROW)       &kp LC(F12)    &tog 7
             >;
 
             label = "mouse";

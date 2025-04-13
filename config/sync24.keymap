@@ -175,10 +175,9 @@
             #binding-cells = <0>;
             bindings =
                 <&mmv MOVE_Y(-1200)>,
-                <&mmv MOVE_Y(-2000)>,
-                <&mmv MOVE_Y(-600)>;
+                <&mmv MOVE_Y(-2000)>;
 
-            tapping-term-ms = <250>;
+            tapping-term-ms = <175>;
         };
 
         Mouse_MoveDown: Mouse_MoveDown {
@@ -187,10 +186,9 @@
             #binding-cells = <0>;
             bindings =
                 <&mmv MOVE_Y(1200)>,
-                <&mmv MOVE_Y(2000)>,
-                <&mmv MOVE_Y(600)>;
+                <&mmv MOVE_Y(2000)>;
 
-            tapping-term-ms = <250>;
+            tapping-term-ms = <175>;
         };
 
         Mouse_MoveLeft: Mouse_MoveLeft {
@@ -199,10 +197,9 @@
             #binding-cells = <0>;
             bindings =
                 <&mmv MOVE_X(-1200)>,
-                <&mmv MOVE_X(-2000)>,
-                <&mmv MOVE_X(-600)>;
+                <&mmv MOVE_X(-2000)>;
 
-            tapping-term-ms = <250>;
+            tapping-term-ms = <175>;
         };
 
         Mouse_MoveRight: Mouse_MoveRight {
@@ -211,10 +208,9 @@
             #binding-cells = <0>;
             bindings =
                 <&mmv MOVE_X(1200)>,
-                <&mmv MOVE_X(2000)>,
-                <&mmv MOVE_X(600)>;
+                <&mmv MOVE_X(2000)>;
 
-            tapping-term-ms = <250>;
+            tapping-term-ms = <175>;
         };
     };
 
@@ -310,8 +306,8 @@
             label = "mouse2";
             display-name = "mouse2";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans      &msc MOVE_Y(-5)  &kp LG(LEFT_BRACKET)  &mmv MOVE_Y(-600)  &kp LG(RIGHT_BRACKET)  &kp LS(SPACE)  &kp HOME
-&trans  &trans  &trans  &trans  &trans  &trans      &msc MOVE_Y(5)   &mmv MOVE_X(-600)     &mmv MOVE_Y(600)   &mmv MOVE_X(600)       &kp SPACE      &kp END
+&trans  &trans  &trans  &trans  &trans  &trans      &msc MOVE_Y(-5)  &kp LG(LEFT_BRACKET)  &mmv MOVE_Y(-300)  &kp LG(RIGHT_BRACKET)  &kp LS(SPACE)  &kp HOME
+&trans  &trans  &trans  &trans  &trans  &trans      &msc MOVE_Y(5)   &mmv MOVE_X(-300)     &mmv MOVE_Y(300)   &mmv MOVE_X(300)       &kp SPACE      &kp END
 &trans  &trans  &trans  &trans  &trans  &trans      &mkp MCLK        &msc SCRL_LEFT        &trans             &msc SCRL_RIGHT        &trans         &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &mkp LCLK        &mkp RCLK             &none              &none                  &trans         &none
             >;

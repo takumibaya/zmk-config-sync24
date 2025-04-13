@@ -290,10 +290,10 @@
         mouse {
             display-name = "Keypad";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans      &msc MOVE_Y(-20)  &kp LG(LEFT_BRACKET)  &mmv MOVE_Y(-1200)  &kp LG(RIGHT_BRACKET)  &kp LS(SPACE)  &kp HOME
-&trans  &trans  &trans  &trans  &trans  &trans      &msc MOVE_Y(20)   &mmv MOVE_X(-1200)    &mmv MOVE_Y(1200)   &mmv MOVE_X(1200)      &kp SPACE      &kp END
-&trans  &trans  &trans  &trans  &trans  &trans      &mkp MCLK         &msc MOVE_X(-100)     &kp LG(R)           &msc MOVE_X(100)       &kp LG(T)      &kp LG(LS(T))
-&trans  &trans  &trans  &trans  &trans  &trans      &mkp LCLK         &mkp RCLK             &mo 8               &kp LC(UP_ARROW)       &kp LC(F12)    &tog 7
+&trans  &trans  &trans  &trans  &trans  &trans      &msc SCRL_UP    &kp LG(LEFT_BRACKET)  &mmv MOVE_UP    &kp LG(RIGHT_BRACKET)  &kp LS(SPACE)  &kp HOME
+&trans  &trans  &trans  &trans  &trans  &trans      &msc SCRL_DOWN  &mmv MOVE_LEFT        &mmv MOVE_DOWN  &mmv MOVE_RIGHT        &kp SPACE      &kp END
+&trans  &trans  &trans  &trans  &trans  &trans      &mkp MCLK       &msc MOVE_X(-100)     &kp LG(R)       &msc MOVE_X(100)       &kp LG(T)      &kp LG(LS(T))
+&trans  &trans  &trans  &trans  &trans  &trans      &mkp LCLK       &mkp RCLK             &mo 8           &kp LC(UP_ARROW)       &kp LC(F12)    &tog 7
             >;
 
             label = "mouse";

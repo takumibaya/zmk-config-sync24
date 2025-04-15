@@ -330,10 +330,10 @@
 
         layer_11 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&kp LG( LA(L))   &kp LG(R)   &kp LA(L)   &kp H   &kp LG(T)   &kp LG(A)    &none  &none  &none  &none  &none  &none                            
+&kp LG( LA(B))   &kp LG( LA(G))   &mt LCTRL W  &mt LALT LG(A)  &mt LSHFT LG(J)  &kp LG( LA(M))      &none    &none    &none    &none    &none    &none   
+&kp LA( LG(P))   &kp R   &kp LG( LS(F))   &kp LG(D)   &kp LG(E)   &kp LG( LA(A))    &none    &none    &none    &none    &none    &none   
+&kp A   &none    &none    &none    &none    &none     &none    &none    &none    &none    &none    &none   
             >;
         };
     };

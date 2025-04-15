@@ -315,7 +315,7 @@
 &kp TAB      &kp LG(U)  &kp N0          &kp UP         &kp HOME         &kp S               &none  &none  &none  &none  &none  &none
 &kp LS(TAB)  &kp U      &mt LCTRL LEFT  &mt LALT DOWN  &mt LSHFT RIGHT  &kp C               &none  &none  &none  &none  &none  &none
 &kp LG(F)    &kp LG(Z)  &kp LG(X)       &kp LG(C)      &kp LG(V)        &kp LG(LA(C))       &none  &none  &none  &none  &none  &none
-&kp LG(S)    &none      &mo 11          &mo 10         &lt 3 BSPC       &mt LGUI SPACE      &none  &none  &none  &none  &none  &none
+&kp LG(S)    &none      &mo 10          &mo 11         &lt 3 BSPC       &mt LGUI SPACE      &none  &none  &none  &none  &none  &none
             >;
         };
 

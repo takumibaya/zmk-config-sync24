@@ -313,20 +313,20 @@
         layer_9 {
             display-name = "DAW1";
             bindings = <
-&kp TAB   &kp LG(U)   &kp N0   &kp UP   &kp HOME   &kp S    &none    &none    &none    &none    &none    &none      
-&kp LCTRL   &kp U   &mt LCTRL LEFT  &mt LALT DOWN  &mt LSHFT RIGHT  &kp C    &none    &none    &none    &none    &none    &none      
-&kp LSHFT   &kp LG(Z)   &kp LG(X)   &kp LG(C)   &kp LG(V)   &kp LG( LA(C))    &none    &none    &none    &none    &none    &none      
-&kp LALT   &kp LG(S)   &mo 11   &mo 10   &lt 2 BSPC  &mt LGUI SPACE   &none    &none    &none    &none    &none    &none    
+&kp ESCAPE  &kp LG(U)  &kp N0          &kp UP         &kp HOME         &kp S               &none  &none  &none  &none  &none  &none
+&kp LCTRL   &kp U      &mt LCTRL LEFT  &mt LALT DOWN  &mt LSHFT RIGHT  &kp C               &none  &none  &none  &none  &none  &none
+&kp LSHFT   &kp LG(Z)  &kp LG(X)       &kp LG(C)      &kp LG(V)        &kp LG(LA(C))       &none  &none  &none  &none  &none  &none
+&kp LALT    &kp LG(S)  &mo 11          &mo 10         &lt 2 BSPC       &mt LGUI SPACE      &none  &none  &none  &none  &none  &none
             >;
         };
 
         layer_10 {
             display-name = "DAW2";
             bindings = <
-&kp TAB   &kp LG(U)   &kp LG(N1)   &kp LS(UP)   &kp LG(N2)   &kp LG(N4)    &none    &none    &none    &none    &none    &none      
-&kp LS(TAB)   &kp LG(N0)   &kp LS(LEFT)   &kp LS(DOWN)   &kp LS(RIGHT)   &kp LG(N5)    &none    &none    &none    &none    &none    &none      
-&kp LG(F)   &kp LG(N6)   &kp LG(N7)   &kp LG(N8)   &kp LG(N9)   &kp LG(N3)    &none    &none    &none    &none    &none    &none      
-&kp B   &none    &none    &none    &none    &none     &none    &none    &none    &none    &none    &none    
+&kp TAB      &kp LG(U)   &kp LG(N1)    &kp LS(UP)    &kp LG(N2)     &kp LG(N4)      &none  &none  &none  &none  &none  &none
+&kp LS(TAB)  &kp LG(N0)  &kp LS(LEFT)  &kp LS(DOWN)  &kp LS(RIGHT)  &kp LG(N5)      &none  &none  &none  &none  &none  &none
+&kp LG(F)    &kp LG(N6)  &kp LG(N7)    &kp LG(N8)    &kp LG(N9)     &kp LG(N3)      &none  &none  &none  &none  &none  &none
+&kp B        &none       &none         &none         &none          &none           &none  &none  &none  &none  &none  &none
             >;
         };
 
